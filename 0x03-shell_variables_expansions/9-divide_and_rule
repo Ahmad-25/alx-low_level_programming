@@ -1,0 +1,2 @@
+#!/bin/bash
+POWER=24;DIVIDE=3; echo $((POWER/DIVIDE))\n
