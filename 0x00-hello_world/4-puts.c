@@ -1,7 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
- * call the entry function main-to print a line
- * use puts functon
+ * call the entry function main-to print a functon
  * return value should be 0(success)
  */
 int main(void)
