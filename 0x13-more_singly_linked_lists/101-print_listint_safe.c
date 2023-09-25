@@ -17,11 +17,11 @@ size_t looped_listint_len(const listint_t *head)
 	const listint_t *a, *b;
 	size_t nodes = 1;
 
-	if (head == NULL || head->ne == NULL)
+	if (head == NULL || head->next == NULL)
 		return (0);
 
-	a = head->ne;
-	b = (head->ne)->ne;
+	a = head->next;
+	b = (head->next)->next;
 
 	while (b)
 	{
@@ -31,22 +31,22 @@ size_t looped_listint_len(const listint_t *head)
 			while (a != b)
 			{
 				nodes++;
-				a = a->ne;
-				b = b->ne;
+				a = a->next;
+				b = b->next;
 			}
 
-			a = a->ne;
+			a = a->next;
 			while (a != b)
 			{
 				nodes++;
-				a = a->ne;
+				a = a->next;
 			}
 
 			return (nodes);
 		}
 
-		a = a->ne;
-		b = (b->n)->ne;
+		a = a->next;
+		b = (b->next)->next;
 	}
 
 	return (0);
