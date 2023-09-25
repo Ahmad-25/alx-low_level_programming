@@ -17,10 +17,10 @@ size_t free_listint_safe(listint_t **h)
 
 	while (*h)
 	{
-		r = *h - (*h)->ne;
+		r = *h - (*h)->next;
 		if (r > 0)
 		{
-			t = (*h)->ne;
+			t = (*h)->next;
 			free(*h);
 			*h = t;
 			len++;
