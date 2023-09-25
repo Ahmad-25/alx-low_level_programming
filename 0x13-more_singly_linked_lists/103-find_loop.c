@@ -14,17 +14,17 @@ listint_t *find_listint_loop(listint_t *head)
 	if (!head)
 		return (NULL);
 
-	while (a && b && b->n)
+	while (a && b && b->next)
 	{
-		b = b->n->n;
-		a = a->n;
+		b = b->next->next;
+		a = a->next;
 		if (b == a)
 		{
 			a = head;
 			while (a != b)
 			{
-				a = a->n;
-				b = b->n;
+				a = a->next;
+				b = b->next;
 			}
 			return (b);
 		}
