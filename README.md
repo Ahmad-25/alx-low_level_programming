@@ -1,2 +1,3 @@
 project C
-python project helllo world
+
+0x00-python-hello_world
